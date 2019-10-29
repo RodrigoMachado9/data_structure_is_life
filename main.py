@@ -1,6 +1,6 @@
 from vetores.vetor import Vetor
 from listas.lista_ligada import ListaLigada
-from listas.duplamente_ligada.lista_duplamente_ligada import ListaLigada as ListaDuplamenteLigada
+from listas_duplamente_ligada.lista_duplamente_ligada import ListaLigada as ListaDuplamenteLigada
 
 print(30 * '-', 'MENU', 30 * '-')
 print('1. vetores')
