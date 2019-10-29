@@ -1,11 +1,16 @@
 from vetores.vetor import Vetor
 from listas.lista_ligada import ListaLigada
 from listas_duplamente_ligada.lista_duplamente_ligada import ListaLigada as ListaDuplamenteLigada
+from pilhas.pilha import Pilha
+from filas.fila import Fila
 
 print(30 * '-', 'MENU', 30 * '-')
 print('1. vetores')
 print('2. listas ligadas')
 print('3. listas duplamente ligadas')
+print('4. pilhas')
+print('5. filas')
+
 
 menu = int(input('Digite a opção desejada: '))
 
@@ -47,3 +52,26 @@ elif menu == 3:
     print(lista_teste)
     print(lista_teste.contem(5))
     print(lista_teste.indice(5))
+
+elif menu == 4:
+    pilha_teste = Pilha()
+    print(pilha_teste.empilhar(3))
+    print(pilha_teste.empilhar(5))
+    print(pilha_teste.empilhar(7))
+    print(pilha_teste.desempilhar())
+    print(pilha_teste.desempilhar())
+
+elif menu == 5:
+    fila_teste = Fila()
+    fila_teste.enfileirar(1)
+    fila_teste.enfileirar(2)
+    fila_teste.enfileirar(3)
+    fila_teste.enfileirar(4)
+    print(fila_teste)
+    print(fila_teste.desenfileirar())
+    print(fila_teste)
+    print(fila_teste.desenfileirar())
+    print(fila_teste)
+
+else:
+    print('Opção inválida')
