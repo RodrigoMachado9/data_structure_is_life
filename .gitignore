@@ -1,2 +1,5 @@
 .idea
 venv
+__pycache__/
+conjuntos/__pycache__/
+listas/__pycache__/lista_ligada.cpython-36.pyc

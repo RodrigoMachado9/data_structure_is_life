@@ -6,10 +6,16 @@ class Conjunto:
         self.__elementos = ListaLigada()
 
     def inserir(self, elemento):
-        pass
+        if not self.contem(elemento):
+            self.__elementos.inserir(elemento)
+            return True
+        return False
 
-    def inserir_posicao(self,elemento):
-        pass
+    def inserir_posicao(self, posicao, elemento):
+        if not self.contem(elemento):
+            self.__elementos.inserir_posicao(posicao, elemento)
+            return True
+        return False
 
     def __str__(self):
         return self.__elementos.__str__()
