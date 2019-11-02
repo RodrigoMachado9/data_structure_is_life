@@ -78,8 +78,8 @@ elif menu == 6:
     conjunto_teste = Conjunto()
     conjunto_teste.inserir(2)
     conjunto_teste.inserir(3)
-    conjunto_teste.inserir(5)
-    conjunto_teste.inserir_posicao(0, 5)
+    conjunto_teste.inserir(4)
+    # conjunto_teste.inserir_posicao(0, 5)
     print(conjunto_teste)
 
 else:

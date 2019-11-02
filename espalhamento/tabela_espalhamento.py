@@ -20,20 +20,24 @@ class TabelaEspalhamento:
             return False
         numero_espalhamento =  self.__gerar_espalhamento(elemento)
         categoria = self.__elementos.recuperar_elemento_no(numero_espalhamento)
-        categoria.remover(elemento)
-        self.__tamanho -= 1
+        categoria.inserir(elemento)
+        self.__tamanho += 1
+        return True
 
     def remover(self, elemento):
         numero_espalhamento = self.__gerar_espalhamento(elemento)
         categoria = self.__elementos.recuperar_elemento_no(numero_espalhamento)
-        categoria.inserir(elemento)
-        self.__tamanho += 1
-        return True
+        categoria.remover_elemento(elemento)
+        self.__tamanho -= 1
 
     def contem(self, elemento):
         numero_espalhamento = self.__gerar_espalhamento(elemento)
         categoria = self.__elementos.recuperar_elemento_no(numero_espalhamento)
         return categoria.contem(elemento)
+
+    @property
+    def tamanho(self):
+        return self.__tamanho
 
     def __str__(self):
         return self.__elementos.__str__()
