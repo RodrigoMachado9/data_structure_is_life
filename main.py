@@ -102,6 +102,7 @@ elif menu == 8:
     arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(2))
     arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(6))
     print(arvore_teste)
+    print(arvore_teste.buscar(no_arvore_inteiro.NoArvoreInteiro(2)))
 
 else:
     print('Opção inválida')
