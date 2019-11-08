@@ -16,9 +16,11 @@ class Arvore:
         if (self.__raiz == None):
             self.__raiz = no
         else:
-            if (self.__raiz.peso()  > no.peso()):
-                self.__raiz.no_esquerdo = no
-            self.__raiz.no_direito = no
+            #if (self.__raiz.peso()  > no.peso()):
+            #    self.__raiz.no_esquerdo = no
+            #self.__raiz.no_direito = no
+            self.__inserir(self.__raiz, no)
+
 
     def __inserir(self, referencia, novo_no):
         if referencia.peso() < novo_no.peso():
@@ -34,3 +36,5 @@ class Arvore:
 
 
 
+    def __str__(self):
+        return "[(X)]" if self.__raiz == None else self.__raiz.__str__()

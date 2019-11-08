@@ -5,7 +5,7 @@ from pilhas.pilha import Pilha
 from filas.fila import Fila
 from conjuntos.conjunto import Conjunto
 from mapas.mapa import Mapa
-
+from arvores import arvore, no_arvore_inteiro
 
 print(30 * '-', 'MENU', 30 * '-')
 print('1. vetores')
@@ -15,6 +15,7 @@ print('4. pilhas')
 print('5. filas')
 print('6. conjuntos')
 print('7. mapas')
+print('8. arvores')
 
 menu = int(input('Digite a opção desejada: '))
 
@@ -93,6 +94,14 @@ elif menu == 7:
     print(mapa_teste)
     print(mapa_teste.contem_chave("par"))
     print(mapa_teste.recuperar("par"))
+
+elif menu == 8:
+    arvore_teste = arvore.Arvore()
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(3))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(4))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(2))
+    arvore_teste.inserir_elemento(no_arvore_inteiro.NoArvoreInteiro(6))
+    print(arvore_teste)
 
 else:
     print('Opção inválida')
