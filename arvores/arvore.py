@@ -56,10 +56,9 @@ class Arvore:
                     print('navegando pela esquerda do nó', referencia.valor.__str__())
                     return self.__buscar(referencia.no_esquerdo, no_busca)
 
-
-
-
     def __str__(self):
         return "[(X)]" if self.__raiz == None else self.__raiz.__str__()
 
 
+    def em_ordem(self):
+        pass
