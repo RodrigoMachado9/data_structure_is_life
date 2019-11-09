@@ -82,3 +82,58 @@ class Arvore():
             print(referencia.valor.__str__())
             if referencia.no_direito != None:
                 self.__em_ordem(referencia.no_direito)
+
+    def pre_ordem(self):
+        #RED
+        self.__pre_ordem(self.__raiz)
+
+    def __pre_ordem(self, referencia):
+        print(referencia.valor.__str__())
+        if referencia.no_esquerdo != None:
+            self.__pre_ordem(referencia.no_esquerdo)
+            if referencia.no_direito != None:
+                self.__pre_ordem(referencia.no_direito)
+        else:
+            if referencia.no_direito != None:
+                self.__pre_ordem(referencia.no_direito)
+
+
+    #       7
+    #   6         10
+    # 4       9      12
+    #   5
+    def pos_ordem(self):
+        #EDR
+        self.__pos_ordem(self.__raiz)
+
+    def __pos_ordem(self, referencia):
+        if referencia.no_esquerdo != None:
+            self.__pos_ordem(referencia.no_esquerdo)
+            if referencia.no_direito != None:
+                self.__pos_ordem(referencia.no_direito)
+            print(referencia.valor.__str__())
+        else:
+            if referencia.no_direito != None:
+                self.__pos_ordem(referencia.no_direito)
+                print(referencia.valor.__str__())
+            else:
+                print(referencia.valor.__str__())
+
+
+    #       7
+    #   6 h = 1         10
+    # 4  h = 2     9      12
+    #   5 h = 3
+
+    def altura(self):
+        return self.__altura(self.__raiz)
+
+    def __altura(self, referencia):
+        if referencia == None:
+            return -1
+        altura_esquerda = self.__altura(referencia.no_esquerdo)
+        altura_direita = self.__altura(referencia.no_direito)
+        return (altura_esquerda + 1) if altura_esquerda > altura_direita else (altura_direita + 1)
+
+    def __str__(self):
+        return "[(X)]" if self.__raiz == None else self.__raiz.__str__()
